@@ -7,25 +7,34 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 
 @Entity
-public class Categoria {
- 
+public class Produto {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
+    private Double preco;
 
-    @ManyToMany(mappedBy = "categorias")
-    private List<Produto> produtos = new ArrayList<>();
-
-    public Categoria() {}
-    public Categoria(Integer id, String nome) {
+    @ManyToMany
+    @JoinTable(
+        name = "PRODUTO_CATEGORIA", 
+        joinColumns = @JoinColumn(name = "produto_id"),
+        inverseJoinColumns = @JoinColumn(name = "categoria_id")
+    )
+    private List<Categoria> categorias = new ArrayList<>();
+    
+    public Produto(){}
+    public Produto(Integer id, String nome, Double preco) {
         this.id = id;
         this.nome = nome;
+        this.preco = preco;
     }
-    
+
     public Integer getId() {
         return id;
     }
@@ -38,11 +47,17 @@ public class Categoria {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public List<Produto> getProdutos() {
-        return produtos;
+    public Double getPreco() {
+        return preco;
     }
-    public void setProdutos(List<Produto> produtos) {
-        this.produtos = produtos;
+    public void setPreco(Double preco) {
+        this.preco = preco;
+    }
+    public List<Categoria> getCategorias() {
+        return categorias;
+    }
+    public void setCategorias(List<Categoria> categorias) {
+        this.categorias = categorias;
     }
 
     @Override
@@ -52,6 +67,7 @@ public class Categoria {
         result = prime * result + ((id == null) ? 0 : id.hashCode());
         return result;
     }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -60,7 +76,7 @@ public class Categoria {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Categoria other = (Categoria) obj;
+        Produto other = (Produto) obj;
         if (id == null) {
             if (other.id != null)
                 return false;
@@ -68,5 +84,4 @@ public class Categoria {
             return false;
         return true;
     }
-    
 }
