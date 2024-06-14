@@ -1,5 +1,6 @@
 package com.nelioalves.cursomc.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.nelioalves.cursomc.domain.enums.EstadoPagamento;
 
 import jakarta.persistence.Entity;
@@ -18,6 +19,7 @@ public abstract class Pagamento {
     private Integer id;
     private Integer estado;
 
+    @JsonBackReference
     @OneToOne
     @JoinColumn(name = "pedido_id")
     @MapsId
@@ -47,6 +49,7 @@ public abstract class Pagamento {
     public void setPedido(Pedido pedido) {
         this.pedido = pedido;
     }
+    
     @Override
     public int hashCode() {
         final int prime = 31;
