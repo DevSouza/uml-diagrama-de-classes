@@ -1,11 +1,15 @@
 ## Modelagem de Dados UML (Análise&Projeto Orientado a Objetos)
-[Curso](https://www.udemy.com/course/uml-diagrama-de-classes/) completo de **modelagem conceitual** com **UML**. Teoria e prática!  
-Bônus: projeto Java, Spring Boot e Hibernate/JPA
-
+[Curso](https://www.udemy.com/course/uml-diagrama-de-classes/) completo de **modelagem conceitual** com **UML**. Teoria e prática! Bônus: projeto Java, Spring Boot e Hibernate/JPA  
 Criado por: [@acenelio](https://github.com/acenelio)
 
-### Descricao do curso
+### Assets
+Na pasta [./assets](./assets) você pode encontrar os `.pdfs` e `.drawio` (*Utilizei [Draw.io - VsCode](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) para modelar*) com os **slides da aula**, **exercicios** e **resoluções dos exercicios**.
 
+### Estudo de caso implementado
+![Imagem com o modelo conceitual desenvolvido](./assets/modelo_conceitual.png)
+> Modelo conceitual implementado.
+
+### Descricao do curso
 O **Modelo Conceitual**, também chamado de **Modelo de Domínio em nível de análise**, é uma descrição das informações que o sistema vai gerenciar. 
 
 Por muitos anos o modelo conceitual tem sido representado pelo modelo **Entidade-relacionamento**, criado por Peter Chen, que em seguida é convertido para o modelo relacional para implementação em banco de dados relacional. Esta abordagem segue o chamado **Paradigma Estruturado**. É uma abordagem consistente e muito usada ainda nos dias atuais.
