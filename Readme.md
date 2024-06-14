@@ -5,9 +5,12 @@ Criado por: [@acenelio](https://github.com/acenelio)
 ### Assets
 Na pasta [./assets](./assets) você pode encontrar os `.pdfs` e `.drawio` (*Utilizei [Draw.io - VsCode](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) para modelar*) com os **slides da aula**, **exercicios** e **resoluções dos exercicios**.
 
-### Estudo de caso implementado
+### Estudo de caso
 ![Imagem com o modelo conceitual desenvolvido](./assets/modelo_conceitual.png)
 > Modelo conceitual implementado.
+
+### Implementação
+[Implementação](./cursomc) do estudo de caso acima.
 
 ### Descricao do curso
 O **Modelo Conceitual**, também chamado de **Modelo de Domínio em nível de análise**, é uma descrição das informações que o sistema vai gerenciar. 
